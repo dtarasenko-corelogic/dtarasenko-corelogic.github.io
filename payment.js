@@ -1,9 +1,16 @@
 window['Renttrack'] = function () {
 	return {
 		create: function (containerId) {
-			const containerHtml = '<p>Credit or debit card number</p>' +
-				'<p>Credit or debit card expiration date</p>' +
-				'<p>Credit or debit card CVC/CVV</p>';
+			const containerHtml =
+				'<label for="card_number">Card Number</label>' +
+				'<input id="card_number">' +
+
+				'<label for="exp_date">Expiration Date</label>' +
+				'<input id="exp_date">' +
+
+				'<label for="cvv">CVV</label>' +
+				'<input id="cvv">';
+
 			document.getElementById(containerId).innerHTML = containerHtml;
 		},
 		createToken: function () {
