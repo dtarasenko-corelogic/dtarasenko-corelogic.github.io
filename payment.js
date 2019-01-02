@@ -10,7 +10,17 @@ window['Renttrack'] = function () {
 		},
 		createToken: function () {
 			console.log('Request authorization id ...');
-			return 'random_authorization_id_123';
+
+			const response = {
+				status: 'pending',
+				authorization_id: '123_456_789'
+			};
+
+			return new Promise(function (resolve, reject) {
+				setTimeout(function() {
+					resolve(response, 1000);
+				});
+			});
 		}
 	};
 };
